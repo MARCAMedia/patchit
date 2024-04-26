@@ -1,0 +1,3 @@
+dotenvPath: "./.env"
+environmentsDir: "./environments"
+patchesDir: "./patches"
