@@ -8,9 +8,9 @@ export class PatchDetector {
 	}
 
 	async getPatches(): Promise<Patch[]> {
-		console.log('Reading patches from', this.patchesDir)
+		// console.log('Reading patches from', this.patchesDir)
 		const patchFiles = await fs.promises.readdir(this.patchesDir)
-		console.log('Found patches:', patchFiles)
+		// console.log('Found patches:', patchFiles)
 
 		const patches: Patch[] = []
 
@@ -34,7 +34,7 @@ export class PatchDetector {
 			}
 
 			const patchModule = await import(path.resolve(patchPath))
-			console.log('Patch module:', patchModule)
+			// console.log('Patch module:', patchModule)
 			patches.push({
 				name: file,
 				path: patchPath,
